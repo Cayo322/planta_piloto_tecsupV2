@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+
+
+.imagecontainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Mantiene la imagen centrada y cubierta */
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: darken the overlay */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.overlay h1{
+  font-size: 2em;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-shadow: 1px 1px 2px rgba(4, 4, 4, 0.575); /* Sombra para el texto */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.overlay p{
+  font-size: 1.7em;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-shadow: 1px 1px 2px rgba(4, 4, 4, 0.575); /* Sombra para el texto */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #3ABEF9;
+  width: 30%;
+  display: flex;
+  flex-direction: column; 
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #3572EF;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #A7E6FF;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ffffff;
+  width: 70%;
+  border-left: none;
+  height: auto;
+}
+
+.animated-image {
+  width: 100%; /* Ajusta el tamaño de la imagen */
+}
+
+
+/*BUTTON*/
+
+h1.button {
+  color: white;
+  margin: 30px auto;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 3vw;
+  letter-spacing: 5px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.contentBox {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.buttonBox {
+  margin: 0 20px 40px;
+  position: relative;
+  max-width: 500px;
+  min-width: 150px;
+  flex: 20%;
+  opacity: 1.6;
+}
+
+button {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  background: rgba(98, 139, 136, 0.151);
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  cursor: pointer;
+}
+
+/* Styles for buttons with borders */
+.border {
+  position: absolute;
+  background: none;
+  transition: all .5s ease-in-out;
+}
+
+#first>.border:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  border-left: 1px solid #49d0f9;
+  border-top: 1px solid #378CE7;
+  width: 50px;
+  height: 50px;
+}
+
+#first>.border:nth-of-type(2) {
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid #378CE7;
+  border-bottom: 1px solid #378CE7;
+  width: 50px;
+  height: 50px;
+}
+
+#first:hover .border {
+  width: 160%;
+  height: 170%;
+}
+
+#sixth {
+  overflow: hidden;
+  table-layout: auto;
+}
+
+#sixth>button {
+  z-index: 1;
+  transition: color .5s ease;
+  width: 500px;
+  height: 100px;
+}
+
+#sixth .border {
+  z-index: 0;
+  background: #73ddfd;
+  width: 65px;
+  height: 50px;
+  transform: rotate(45deg);
+}
+
+#sixth>.border:nth-of-type(1) {
+  top: -55px;
+  left: -50px;
+}
+
+#sixth>.border:nth-of-type(2) {
+  top: -55px;
+  right: -55px;
+}
+
+#sixth>.border:nth-of-type(3) {
+  bottom: -55px;
+  left: -50px;
+}
+
+#sixth>.border:nth-of-type(4) {
+  bottom: -55px;
+  right: -55px;
+}
+
+#sixth:hover .border {
+  transform: scale(15.7) rotate(45deg);
+}
+
+#sixth:hover button {
+  color: #4043fd;
+  transition: color 2s ease;
+}

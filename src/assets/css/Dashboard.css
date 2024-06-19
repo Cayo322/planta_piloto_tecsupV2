@@ -1,0 +1,193 @@
+/* Styles for the dashboard */
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", monospace;
+}
+
+.dashboard-container {
+  min-height: calc(100vh - 100px); /* Adjust height to account for footer */
+}
+
+.carousel-item img {
+  height: 90vh; /* Adjust this value as needed */
+  object-fit: cover;
+  transition: transform 2s; /* Smooth transition for zoom effect */
+}
+
+.carousel-item.active img {
+  transform: scale(1.1); /* Zoom in on active slide */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 2s;
+}
+
+.animated-caption {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  transform: translateY(-50%);
+  animation: slideInFromLeft 2s forwards;
+  font-family: "Courier New", monospace;
+  font-size: 24px; /* font size */
+  font-weight: 400; /* font weight */
+  line-height: 27px; /* line height */
+  letter-spacing: 0px; /* letter spacing */
+  color: #fff; /* text color */
+  text-align: left; /* text alignment */
+}
+
+.gaa {
+  position: absolute;
+  bottom: 75%;
+  left: 5%;
+  transform: translateY(-50%);
+  animation: slideInFromLeft 2s forwards;
+  font-family: "Latin Modern Roman";
+  font-style: italic;
+  font-size: 74px; /* font size */
+  font-weight: 400px; /* font weight */
+  line-height: 37px; /* line height */
+  letter-spacing: 0px; /* letter spacing */
+  color: #fff; /* text color */
+  text-align: left; /* text alignment */
+}
+.gaa h5 {
+  font-size: 28px; /* Reemplaza 24px con el tamaño deseado */
+}
+
+/* Keyframes for text animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animated-caption {
+    bottom: 20%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .animated-caption {
+    bottom: 15%;
+    left: 5%;
+  }
+}
+.animated-caption h5 {
+  font-size: 28px; /* larger font size for h5 */
+}
+
+.animated-caption p {
+  font-size: 20px; /* smaller font size for p */
+}
+
+.content-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-section {
+    text-align: center;
+  }
+}
+
+.background-section {
+  background-image: url('assets/img/plantita.png'); /* Adjust the path as needed */
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  margin: 0; /* No margin to ensure it takes full width */
+}
+
+.overlay-content {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.overlay-content h2 {
+  font-family: "Fjalla One"; /* font family */
+  font-size: 32px; /* font size */
+  font-weight: 400; /* font weight */
+  color: #333; /* text color */
+}
+
+.overlay-content p {
+  font-size: 18px; /* font size */
+  color: #555; /* text color */
+}

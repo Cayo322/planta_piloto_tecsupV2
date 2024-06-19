@@ -1,0 +1,135 @@
+.chancadora-container {
+  display: flex;
+  justify-content: space-between; /* Asegura que el contenido esté separado adecuadamente */
+  align-items: flex-start; /* Alinea el contenido al inicio para evitar solapamiento */
+  min-height: calc(100vh - 60px); /* Ajusta la altura mínima para el contenido */
+  padding: 20px; /* Espaciado interior para evitar solapamiento */
+  background-color: #f0f0f0; /* Color de fondo de la sección */
+  margin-top: 60px; /* Espacio para el header */
+  margin-bottom: 60px; /* Espacio para el footer */
+}
+
+.image-container {
+  position: relative;
+  height: 90vh;
+  width: 500px; /* Máximo ancho del contenedor de la imagen */
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.image-container img {
+  display: block;
+  width: 110%;
+  height: 100%;
+  border-radius: 8px; /* Borde redondeado para la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.hover-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%; /* Forma circular para el ícono */
+  background: rgba(107, 33, 168, 0.24);
+  border: 1px solid rgba(107, 33, 168, 1);
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.hover-item:hover {
+  height: 25em;
+  width: 20em;
+  border-radius: 0.5em; /* Se ajusta el borde para el tamaño aumentado */
+}
+
+.hover-icon {
+  height: 1.5em;
+  width: 1.5em;
+  transition: opacity 0.3s;
+}
+
+.hover-item:hover .hover-icon {
+  opacity: 0;
+}
+
+.hover-text {
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  transform: translate(-50%, 0); /* Centra horizontalmente */
+  width: 80%; /* Ajusta el ancho del texto */
+  max-width: 400px; /* Máximo ancho del texto */
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.95); /* Fondo del texto con opacidad */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10; /* Asegura que esté por encima de los íconos */
+}
+
+.hover-item:hover .hover-text {
+  opacity: 1;
+  transform: translate(-50%, -100%); /* Muestra el texto hacia arriba */
+}
+
+.hover-text h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  
+  margin-bottom: 0.5em;
+}
+
+.hover-text p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 0.8em;
+}
+
+.learn-more {
+  font-size: 0.8em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Media query para ajustar estilos en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .hover-text {
+    width: 90%; /* Ajusta el ancho del texto para dispositivos móviles */
+  }
+}
+
+.additional-text {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 30px; /* Añade espaciado interior */
+  margin-left: 70px;
+}
+
+.additional-text h3 {
+  font-size: 2.5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra para el título */
+  font-family: "Latin Modern Roman";
+  font-style: oblique;
+}
+
+.additional-text h4 {
+  font-size: 1.5em;
+  margin-bottom: 0em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Sombra para el título */
+  font-family: "Latin Modern Roman";
+  font-style: oblique;
+}
+
+.additional-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-top: 50px;
+}

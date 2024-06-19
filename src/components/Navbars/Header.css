@@ -1,0 +1,67 @@
+/* Header.css */
+
+/* Aseguramos que el contenedor ocupe el ancho completo */
+.navbar {
+  width: 100%;
+  position: fixed; /* Hace que el header se mantenga fijo */
+  top: 0;
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+/* Color de fondo personalizado para el Header */
+.navbar.bg-custom {
+  background-color: #2e57a8; /* Cambia este color según tus necesidades */
+}
+
+/* Separación de los elementos dentro del Navbar */
+.navbar-nav .nav-item {
+  margin-right: 20px; /* Aumenta la separación entre elementos */
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 20px; /* Aumenta el padding para separar más los elementos */
+}
+
+.navbar-nav .nav-link p {
+  margin: 0;
+  color: #ffffff; /* Color de texto blanco para mejor contraste */
+  font: small-caps 100%/200% serif;
+}
+
+/* Estilo para el Navbar Brand */
+.navbar-brand {
+  margin-right: 30px; /* Separación entre el Brand y el resto de elementos */
+  color: #fff; /* Color de texto blanco */
+}
+
+/* Ajuste del botón toggle en vista móvil */
+.navbar-toggler {
+  margin-right: 10px;
+}
+
+/* Asegurar que el dropdown tenga el espacio adecuado */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+/* Clase personalizada para asegurar la alineación a la izquierda */
+.custom-navbar {
+  display: flex;
+  justify-content: flex-start; /* Alinea elementos a la izquierda */
+  align-items: center;
+}
+
+.navbar-collapse {
+  flex-grow: 0; /* Para evitar que la barra de navegación se expanda completamente */
+}
+
+/* Estilo para la imagen de la marca */
+.brand-logo {
+  height: 60px; /* Ajusta la altura de la imagen según sea necesario */
+  margin-right: 100px; /* Separación entre la imagen y el texto del brand */
+}
+
+/* Ajuste para el contenido principal para que no quede debajo del header fijo */
+.main-panel .content {
+  margin-top: 70px; /* Ajusta esto según la altura del header */
+}
